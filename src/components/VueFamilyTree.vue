@@ -55,15 +55,11 @@ export default {
     },
     wrapperStyles: {
       type: Object,
-      default() {
-        return this.enableDrag
-          ? {
-              position: "relative",
-              width: "100%",
-              height: "600px",
-            }
-          : null;
-      },
+      default: (props) =>  props.enableDrag ?
+          { position: "relative",
+            width: "100%",
+            height: "600px",
+          } :null
     },
     dragCursor: {
       type: String,
